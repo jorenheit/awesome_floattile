@@ -67,6 +67,7 @@ local function up(c, cg, sg)
    local x, y, width, height
 
    if floatTile[c].up and not (floatTile[c].left or floatTile[c].right) then
+      c.maximized = true
       return sg.x, sg.y, sg.width, sg.height
    elseif not (floatTile[c].left or floatTile[c].right) then
       x = sg.x
